@@ -8,7 +8,7 @@
 
    ```bash
    npm install
-
+   ```
    This command installs all the required packages listed in the package.json file.
 
 2. **Compile TypeScript Code:**
