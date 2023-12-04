@@ -1,4 +1,4 @@
-# Adven_of_Code_2023
+# Advent_of_Code_2023
 
 ## How to Run the Project
 
