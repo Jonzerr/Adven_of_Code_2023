@@ -4,7 +4,7 @@ console.time('executionTime');
 
 const input :string = fs.readFileSync('src/day*/inputSample.txt', 'utf8');
 const inputArray :string[] = input.split('\n').map((line) => line.trim());
-let lowestLocation = Infinity;
+
 
 
 
