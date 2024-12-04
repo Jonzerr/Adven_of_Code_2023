@@ -58,7 +58,28 @@ for (const str of strings) {
 console.log('Result of part 1:', count);
 
 // PART 2:
-
-//console.log('Result of part 2:', resultPart2);
+let countPart2 = 0;
+for (let row = 1; row < inputArray.length - 1; row++){
+    for (let col = 1; col < inputArray.length - 1; col ++){
+        const char = inputArray[row][col];
+        if (char == 'A'){
+            const neighbors = {
+                leftUp: inputArray[row - 1][col - 1],
+                rightDown: inputArray[row + 1][col + 1],
+                rightUp: inputArray[row - 1][col + 1],
+                leftDown: inputArray[row + 1][col - 1]
+            };
+            if (
+                ((neighbors.leftUp === 'S' && neighbors.rightDown === 'M') ||
+                 (neighbors.leftUp === 'M' && neighbors.rightDown === 'S')) &&
+                ((neighbors.rightUp === 'S' && neighbors.leftDown === 'M') ||
+                 (neighbors.rightUp === 'M' && neighbors.leftDown === 'S'))
+            ) {
+                countPart2++;
+            }
+        }
+    }
+}
+console.log('Result of part 2:', countPart2);
 
 //console.timeEnd('executionTime'); 
