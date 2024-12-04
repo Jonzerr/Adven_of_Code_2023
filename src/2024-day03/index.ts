@@ -21,13 +21,10 @@ let handler = true;
 let resultPart2 = 0;
 
 instructions.forEach( group => {
-    if (group[0] == 'do()') handler = true;  
-    if (group[0] == 'don\'t()') handler = false;
-    if (group[0].match(/mul\(\d{1,3},\d{1,3}\)/g) && handler == true){
-        const num1 = +group[1];
-        const num2 = +group[2];
-        resultPart2 += (num1 * num2);
-    }    
+    const [instruction, num1, num2] = group;
+    if (instruction == 'do()') handler = true;  
+    if (instruction == 'don\'t()') handler = false;
+    if (instruction.startsWith('mul') && handler == true) resultPart2 += (+num1 * +num2);        
 });
 
 console.log('Result of part 2:', resultPart2);

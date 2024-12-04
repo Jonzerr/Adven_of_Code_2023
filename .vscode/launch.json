@@ -175,7 +175,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "2024-day03",
+            "name": "2024-day04",
             "skipFiles": [
                 "<node_internals>/**"
             ],
