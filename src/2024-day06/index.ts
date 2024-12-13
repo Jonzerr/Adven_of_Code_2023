@@ -108,9 +108,6 @@ function countObstructionPosition( start: number[]): number {
             if (map[row][col] === '.' && !(row === start[0] && col === start[1])) {
                 // Dočasne pridaj prekážku
                 map[row][col] = '#';
-                // if(row === 6 && col === 3){
-                //     console.log( row, col);
-                // }
                 // Spusti simuláciu
                 if (loopchecker()){
                     loopcount++;
